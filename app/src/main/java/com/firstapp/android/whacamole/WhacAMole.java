@@ -20,7 +20,8 @@ public class WhacAMole extends AppCompatActivity
     private RelativeLayout relativeLayout;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_whac_amole);
 
@@ -59,6 +60,11 @@ public class WhacAMole extends AppCompatActivity
                 ligne.addView(bouton);
             }
         }
+        Game game = new Game(this);
+    }
 
+    public ArrayList<Button> getBoutons()
+    {
+        return boutons;
     }
 }
