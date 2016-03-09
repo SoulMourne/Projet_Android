@@ -52,6 +52,7 @@ public class WhacAMole extends AppCompatActivity
             {
                 Button bouton = new Button(this);
                 bouton.setText("");
+                bouton.setClickable(false);
                 bouton.setLayoutParams(param2);
                 bouton.setHeight(bouton.getWidth());
                 boutons.add(bouton);
