@@ -20,7 +20,7 @@ import java.util.Timer;
 public class Manche
 {
     private int nbMole;
-    private static final int MAX_MOLES = 3;
+    private static final int MAX_MOLES = 4;
 
     public Manche(GameActivity gameActivity, Game game)
     {
