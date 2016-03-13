@@ -22,6 +22,7 @@ public class Game
             while (numero < 0 || !activeMoles.contains(numero))
             {
                 numero = generator.nextInt(25);
+                activeMoles.add(numero);
             }
             whacAMole.getBoutons().get(numero).setClickable(true);
             whacAMole.getBoutons().get(numero).setText("T");
