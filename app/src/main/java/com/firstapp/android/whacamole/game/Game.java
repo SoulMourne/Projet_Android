@@ -1,11 +1,15 @@
 package com.firstapp.android.whacamole.game;
 
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.PorterDuff;
 import android.view.View;
+import android.widget.Button;
 
 import com.firstapp.android.whacamole.activity.*;
 import com.firstapp.android.whacamole.score.Score;
 
+import java.util.Iterator;
 import java.util.Timer;
 
 /**
@@ -49,6 +53,14 @@ public class Game
         }
         else
         {
+            Iterator<Button> it = gameActivity.getBoutons().iterator();
+            while (it.hasNext())
+            {
+                Button current = it.next();
+                current.setOnTouchListener(null);
+                current.getBackground().setColorFilter(Color.rgb(128, 128, 128), PorterDuff.Mode.MULTIPLY);
+            }
+
             //Retour menu ou scores
             gameActivity.setTitle("Fin de la partie");
             return null;
