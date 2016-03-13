@@ -1,6 +1,9 @@
 package com.firstapp.android.whacamole.game;
 
-import com.firstapp.android.whacamole.activity.GameActivity;
+import android.content.Intent;
+import android.view.View;
+
+import com.firstapp.android.whacamole.activity.*;
 import com.firstapp.android.whacamole.score.Score;
 
 import java.util.Timer;
@@ -37,6 +40,7 @@ public class Game
         else
         {
             //Retour menu ou scores
+            gameActivity.setTitle("Fin de la partie");
             return null;
         }
     }
