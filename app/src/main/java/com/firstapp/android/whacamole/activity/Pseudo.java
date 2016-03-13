@@ -24,6 +24,7 @@ public class Pseudo extends AppCompatActivity {
         manches_text=(TextView)findViewById(R.id.manches_text);
         manche_moins_btn = (Button) findViewById(R.id.manche_moins_btn);
         pseudoTexte = (EditText) findViewById(R.id.editText);
+        setTitle("Entrez votre pseudo");
     }
 
     public void go_to_game(View view){

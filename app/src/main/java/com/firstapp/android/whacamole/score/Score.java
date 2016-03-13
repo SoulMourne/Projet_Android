@@ -8,6 +8,12 @@ public class Score
     private int points;
     private String pseudo;
 
+    public Score ()
+    {
+        pseudo = "";
+        points = 0;
+    }
+
     public Score(String parPseudo)
     {
         pseudo = parPseudo;

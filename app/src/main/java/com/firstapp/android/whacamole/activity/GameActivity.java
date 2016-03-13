@@ -73,9 +73,18 @@ public class GameActivity extends AppCompatActivity
                 ligne.addView(bouton);
             }
         }
-        bdScores = new Scores(this, this.bdName, null, Build.VERSION.SDK_INT);
+        bdScores = new Scores(this, this.bdName, null, 1);
+
+        //bdScores
         Game game = new Game(this,pseudo,manches);
         game.mancheSuivante();
+    }
+
+    @Override
+    public void onBackPressed()
+    {
+        Intent intent2 = new Intent(GameActivity.this , Menu.class);
+        startActivity(intent2);
     }
 
     public ArrayList<Button> getBoutons()
