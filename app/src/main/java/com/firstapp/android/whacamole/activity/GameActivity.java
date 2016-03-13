@@ -92,9 +92,5 @@ public class GameActivity extends AppCompatActivity
         return boutons;
     }
 
-    @Override
-    public void onBackPressed() {
-        Intent intent3 = new Intent(GameActivity.this , Menu.class);
-        startActivity(intent3);
-    }
+
 }

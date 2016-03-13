@@ -3,10 +3,28 @@ package com.firstapp.android.whacamole.score;
 /**
  * Created by Jean-Paul on 13/03/2016.
  */
-public class Score
+
+import android.content.Intent;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.View;
+
+import com.firstapp.android.whacamole.R;
+
+
+public class Score extends AppCompatActivity
 {
     private int points;
     private String pseudo;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setTitle("Tableau des scores");
+        setContentView(R.layout.activity_score);
+    }
+
+
 
     public Score ()
     {

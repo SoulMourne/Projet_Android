@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.firstapp.android.whacamole.R;
-import com.firstapp.android.whacamole.activity.Pseudo;
+import com.firstapp.android.whacamole.score.Score;
 
 
 public class Menu extends AppCompatActivity {
@@ -24,7 +24,16 @@ public class Menu extends AppCompatActivity {
         startActivity(intent1);
     }
 
+    public void go_to_score(View view){
+        Intent intent2 = new Intent(Menu.this, Score.class);
+        startActivity(intent2);
+
+
+    }
+
     public void exit_app(View view){
         finish();
     }
+
+
 }
