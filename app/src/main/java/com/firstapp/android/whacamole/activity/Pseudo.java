@@ -45,10 +45,6 @@ public class Pseudo extends AppCompatActivity {
         if (num_manche == 1){
             manche_moins_btn.setVisibility(View.INVISIBLE);
         }
-
-
-
-
     }
 
 }
