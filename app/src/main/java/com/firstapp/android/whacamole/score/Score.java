@@ -41,6 +41,9 @@ public class Score
 
     public void removePoints (int removedPoints)
     {
-        this.score -= removedPoints;
+        if (score > 0)
+            this.score -= removedPoints;
+        if (score < 0)
+            this.score = 0;
     }
 }
