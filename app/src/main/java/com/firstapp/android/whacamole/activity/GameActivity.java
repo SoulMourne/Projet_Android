@@ -8,7 +8,7 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
 import com.firstapp.android.whacamole.R;
-import com.firstapp.android.whacamole.jeu.Game;
+import com.firstapp.android.whacamole.game.Game;
 import com.firstapp.android.whacamole.score.Scores;
 
 import java.util.ArrayList;
