@@ -33,6 +33,10 @@ public class GameActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_whac_amole);
 
+        Bundle b = getIntent().getExtras();
+        String pseudo = b.getString("pseudo");
+        int manches = b.getInt("manches");
+
         lignesLayout = new HashMap<>();
         boutons = new ArrayList<>();
 
@@ -69,7 +73,8 @@ public class GameActivity extends AppCompatActivity
             }
         }
         bdScores = new Scores(this, this.bdName, null, Build.VERSION.SDK_INT);
-        Game game = new Game(this);
+        Game game = new Game(this,pseudo,manches);
+        game.mancheSuivante();
     }
 
     public ArrayList<Button> getBoutons()
