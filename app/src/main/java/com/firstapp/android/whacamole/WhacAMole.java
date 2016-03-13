@@ -1,5 +1,6 @@
 package com.firstapp.android.whacamole;
 
+import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Button;
@@ -18,6 +19,9 @@ public class WhacAMole extends AppCompatActivity
     private HashMap<Integer,LinearLayout> lignesLayout;
 
     private RelativeLayout relativeLayout;
+
+    private Scores bdScores;
+    private String bdName = "scores.db";
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -60,6 +64,7 @@ public class WhacAMole extends AppCompatActivity
                 ligne.addView(bouton);
             }
         }
+        bdScores = new Scores(this, this.bdName, null, Build.VERSION.SDK_INT);
         Game game = new Game(this);
     }
 
