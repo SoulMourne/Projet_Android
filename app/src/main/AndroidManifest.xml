@@ -22,6 +22,8 @@
         </activity>
         <activity android:name=".activity.GameActivity" />
         <activity android:name=".activity.Pseudo" />
+        <activity android:name=".score.Score" />
+
     </application>
 
 </manifest>

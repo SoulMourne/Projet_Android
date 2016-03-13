@@ -43,7 +43,8 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_alignRight="@+id/btn_exit"
-        android:layout_alignEnd="@+id/btn_exit" />
+        android:layout_alignEnd="@+id/btn_exit"
+        android:onClick="go_to_score"/>
 
     <Button
         style="?android:attr/buttonStyleSmall"

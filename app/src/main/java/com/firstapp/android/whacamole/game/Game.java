@@ -1,9 +1,11 @@
 package com.firstapp.android.whacamole.game;
 
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.view.View;
+import android.widget.Toast;
 import android.widget.Button;
 
 import com.firstapp.android.whacamole.activity.*;
@@ -62,7 +64,13 @@ public class Game
             }
 
             //Retour menu ou scores
+
+            //Context context = gameActivity.getApplicationContext();
+            //CharSequence text = "Fin de la partie";
+            //int duration = Toast.LENGTH_SHORT;
+
             gameActivity.setTitle("Fin de la partie");
+            //Toast toast = Toast.makeText(context, text, duration);
             return null;
         }
     }
