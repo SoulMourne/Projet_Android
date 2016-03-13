@@ -1,5 +1,6 @@
 package com.firstapp.android.whacamole.activity;
 
+import android.content.Intent;
 import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -75,6 +76,13 @@ public class GameActivity extends AppCompatActivity
         bdScores = new Scores(this, this.bdName, null, Build.VERSION.SDK_INT);
         Game game = new Game(this,pseudo,manches);
         game.mancheSuivante();
+    }
+
+    @Override
+    public void onBackPressed()
+    {
+        Intent intent2 = new Intent(GameActivity.this , Menu.class);
+        startActivity(intent2);
     }
 
     public ArrayList<Button> getBoutons()
