@@ -1,6 +1,12 @@
 package com.firstapp.android.whacamole;
 
+import android.graphics.Color;
+import android.graphics.PorterDuff;
+import android.graphics.drawable.Drawable;
+import android.widget.Button;
+
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.Random;
 
 /**
@@ -10,8 +16,17 @@ public class Game
 {
     private int nbMole;
 
+
     public Game(WhacAMole whacAMole)
     {
+        Iterator<Button> it = whacAMole.getBoutons().iterator();
+        while (it.hasNext())
+        {
+            Button current = it.next();
+            current.setClickable(true);
+            current.getBackground().setColorFilter(Color.rgb(0,0,0), PorterDuff.Mode.MULTIPLY);
+            //current.setBackgroundColor(Color.rgb(255,102,255));
+        }
         Random generator = new Random();
         nbMole = generator.nextInt(3)+1;
 
@@ -24,8 +39,9 @@ public class Game
                 numero = generator.nextInt(25);
                 activeMoles.add(numero);
             }
-            whacAMole.getBoutons().get(numero).setClickable(true);
-            whacAMole.getBoutons().get(numero).setText("T");
+            Button current = whacAMole.getBoutons().get(numero);
+            current.setClickable(true);
+            current.getBackground().setColorFilter(Color.rgb(153, 0, 0), PorterDuff.Mode.MULTIPLY);
         }
     }
 }
