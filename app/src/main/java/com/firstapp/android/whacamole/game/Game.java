@@ -30,6 +30,16 @@ public class Game
 
     }
 
+    public int getNumManche()
+    {
+        return this.numManche;
+    }
+
+    public Score getScore()
+    {
+        return this.score;
+    }
+
     public Manche mancheSuivante()
     {
         if (numManche < nbManches)

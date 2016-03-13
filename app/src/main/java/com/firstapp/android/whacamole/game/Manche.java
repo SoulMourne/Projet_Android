@@ -1,5 +1,7 @@
 package com.firstapp.android.whacamole.game;
 
+import android.content.Intent;
+import android.content.pm.LabeledIntent;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.os.Handler;
@@ -23,8 +25,10 @@ public class Manche
     private int nbMole;
     private static final int MAX_MOLES = 4;
 
-    public Manche(GameActivity gameActivity, Game game)
+    public Manche(final GameActivity gameActivity, final Game game)
     {
+        gameActivity.setTitle("Manche "+ game.getNumManche() +"     Score : " + game.getScore().getPoints());
+
         Iterator<Button> it = gameActivity.getBoutons().iterator();
 
         while (it.hasNext())
@@ -36,6 +40,10 @@ public class Manche
                 @Override
                 public boolean onTouch(View v, MotionEvent event) {
                     current.getBackground().setColorFilter(Color.rgb(255, 128, 0), PorterDuff.Mode.MULTIPLY);
+                    if (event.getAction() == android.view.MotionEvent.ACTION_DOWN) {
+                        game.getScore().removePoints(10);
+                        gameActivity.setTitle("Manche " + game.getNumManche() + "     Score : " + game.getScore().getPoints());
+                    }
                     return true;
                 }
             });
@@ -58,11 +66,14 @@ public class Manche
                 @Override
                 public boolean onTouch(View v, MotionEvent event) {
                     current.getBackground().setColorFilter(Color.rgb(0, 153, 0), PorterDuff.Mode.MULTIPLY);
+                    if (event.getAction() == android.view.MotionEvent.ACTION_DOWN) {
+                        game.getScore().addPoints(2);
+                        gameActivity.setTitle("Manche " + game.getNumManche() + "     Score : " + game.getScore().getPoints());
+                    }
                     return true;
                 }
             });
         }
-
         MancheTimer m = new MancheTimer(game);
         m.start();
 

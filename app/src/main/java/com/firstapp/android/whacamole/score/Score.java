@@ -5,13 +5,13 @@ package com.firstapp.android.whacamole.score;
  */
 public class Score
 {
-    private int score;
+    private int points;
     private String pseudo;
 
     public Score(String parPseudo)
     {
         pseudo = parPseudo;
-        score = 0;
+        points = 0;
     }
 
     public String getPseudo()
@@ -24,23 +24,26 @@ public class Score
         this.pseudo = parPseudo;
     }
 
-    public int getScore()
+    public int getPoints()
     {
-        return this.score;
+        return this.points;
     }
 
-    public void setScore(int parScore)
+    public void setPoints(int parPoints)
     {
-        this.score = parScore;
+        this.points = parPoints;
     }
 
     public void addPoints (int addedPoints)
     {
-        this.score += addedPoints;
+        this.points += addedPoints;
     }
 
     public void removePoints (int removedPoints)
     {
-        this.score -= removedPoints;
+        if (points > 0)
+            this.points -= removedPoints;
+        if (points < 0)
+            this.points = 0;
     }
 }
