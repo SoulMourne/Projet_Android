@@ -11,7 +11,7 @@ import com.firstapp.android.whacamole.game.Manche;
 public class MancheTimer extends Thread
 {
     private long startTime;
-    private int startSecond;
+    private long startMillis;
     private Game game;
 
     //runs without a timer by reposting this handler at the end of the runnable
@@ -21,7 +21,7 @@ public class MancheTimer extends Thread
     {
         game = parGame;
         startTime = 0;
-        startSecond = (int) (System.currentTimeMillis()/1000);
+        startMillis = System.currentTimeMillis();
         timerHandler = new Handler();
     }
 
@@ -31,8 +31,8 @@ public class MancheTimer extends Thread
         long millis = System.currentTimeMillis() - startTime;
         int seconds = (int) (millis / 1000);
 
-        if (startSecond+3 > seconds)
-            timerHandler.postDelayed(this, 500);
+        if (startMillis+1500 > millis)
+            timerHandler.postDelayed(this, 200);
         else
             game.mancheSuivante();
     }
