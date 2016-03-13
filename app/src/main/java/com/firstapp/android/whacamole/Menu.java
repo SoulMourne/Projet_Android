@@ -15,8 +15,8 @@ public class Menu extends AppCompatActivity {
         setContentView(R.layout.activity_menu);
     }
 
-    public void go_to_game(View view){
-        Intent intent1 = new Intent(Menu.this , WhacAMole.class);
+    public void go_to_pseudo(View view){
+        Intent intent1 = new Intent(Menu.this , Pseudo.class);
         startActivity(intent1);
     }
 

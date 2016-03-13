@@ -31,7 +31,7 @@
         android:layout_alignParentStart="true"
         android:layout_alignRight="@+id/btn_score"
         android:layout_alignEnd="@+id/btn_score"
-        android:onClick="go_to_game"/>
+        android:onClick="go_to_pseudo"/>
 
     <Button
         style="?android:attr/buttonStyleSmall"
