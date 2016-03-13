@@ -73,7 +73,9 @@ public class GameActivity extends AppCompatActivity
                 ligne.addView(bouton);
             }
         }
-        bdScores = new Scores(this, this.bdName, null, Build.VERSION.SDK_INT);
+        bdScores = new Scores(this, this.bdName, null, 1);
+
+        //bdScores
         Game game = new Game(this,pseudo,manches);
         game.mancheSuivante();
     }
