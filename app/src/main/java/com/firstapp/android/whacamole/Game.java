@@ -3,6 +3,7 @@ package com.firstapp.android.whacamole;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
+import android.view.View;
 import android.widget.Button;
 
 import java.util.ArrayList;
@@ -22,9 +23,15 @@ public class Game
         Iterator<Button> it = whacAMole.getBoutons().iterator();
         while (it.hasNext())
         {
-            Button current = it.next();
+            final Button current = it.next();
             current.setClickable(true);
-            current.getBackground().setColorFilter(Color.rgb(0,0,0), PorterDuff.Mode.MULTIPLY);
+            current.getBackground().setColorFilter(Color.rgb(0, 0, 0), PorterDuff.Mode.MULTIPLY);
+            current.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    current.getBackground().setColorFilter(Color.rgb(255, 128, 0), PorterDuff.Mode.MULTIPLY);
+                }
+            });
             //current.setBackgroundColor(Color.rgb(255,102,255));
         }
         Random generator = new Random();
@@ -39,9 +46,15 @@ public class Game
                 numero = generator.nextInt(25);
                 activeMoles.add(numero);
             }
-            Button current = whacAMole.getBoutons().get(numero);
+            final Button current = whacAMole.getBoutons().get(numero);
             current.setClickable(true);
             current.getBackground().setColorFilter(Color.rgb(153, 0, 0), PorterDuff.Mode.MULTIPLY);
+            current.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    current.getBackground().setColorFilter(Color.rgb(0,153,0),PorterDuff.Mode.MULTIPLY);
+                }
+            });
         }
     }
 }
