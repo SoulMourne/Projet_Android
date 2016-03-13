@@ -16,45 +16,20 @@ import java.util.Random;
  */
 public class Game
 {
-    private int nbMole;
+    private int numManche;
+    private Manche currentManche;
+    private GameActivity gameActivity;
 
-
-    public Game(GameActivity gameActivity)
+    public Game(GameActivity parGameActivity)
     {
-        Iterator<Button> it = gameActivity.getBoutons().iterator();
-        while (it.hasNext())
-        {
-            final Button current = it.next();
-            current.setClickable(true);
-            current.getBackground().setColorFilter(Color.rgb(0, 0, 0), PorterDuff.Mode.MULTIPLY);
-            current.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    current.getBackground().setColorFilter(Color.rgb(255, 128, 0), PorterDuff.Mode.MULTIPLY);
-                }
-            });
-        }
-        Random generator = new Random();
-        nbMole = generator.nextInt(3)+1;
+        gameActivity = parGameActivity;
+        numManche = 1;
+        currentManche = mancheSuivante();
 
-        ArrayList<Integer> activeMoles = new ArrayList<>();
-        for (int i = 0; i<nbMole; i++)
-        {
-            int numero = -1;
-            while (numero < 0 || !activeMoles.contains(numero))
-            {
-                numero = generator.nextInt(25);
-                activeMoles.add(numero);
-            }
-            final Button current = gameActivity.getBoutons().get(numero);
-            current.setClickable(true);
-            current.getBackground().setColorFilter(Color.rgb(153, 0, 0), PorterDuff.Mode.MULTIPLY);
-            current.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    current.getBackground().setColorFilter(Color.rgb(0,153,0),PorterDuff.Mode.MULTIPLY);
-                }
-            });
-        }
+    }
+
+    public Manche mancheSuivante()
+    {
+        return new Manche(gameActivity, this);
     }
 }
