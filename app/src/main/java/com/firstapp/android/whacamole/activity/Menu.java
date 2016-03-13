@@ -1,9 +1,12 @@
-package com.firstapp.android.whacamole;
+package com.firstapp.android.whacamole.activity;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+
+import com.firstapp.android.whacamole.R;
+import com.firstapp.android.whacamole.activity.Pseudo;
 
 
 public class Menu extends AppCompatActivity {
