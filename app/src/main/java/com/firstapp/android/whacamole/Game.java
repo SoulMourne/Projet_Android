@@ -13,7 +13,7 @@ public class Game
     public Game(WhacAMole whacAMole)
     {
         Random generator = new Random();
-        nbMole = generator.nextInt(4)+1;
+        nbMole = generator.nextInt(3)+1;
 
         ArrayList<Integer> activeMoles = new ArrayList<>();
         for (int i = 0; i<nbMole; i++)
