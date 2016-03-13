@@ -3,6 +3,7 @@ package com.firstapp.android.whacamole.game;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.os.Handler;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 
@@ -31,10 +32,11 @@ public class Manche
             final Button current = it.next();
             current.setClickable(true);
             current.getBackground().setColorFilter(Color.rgb(0, 0, 0), PorterDuff.Mode.MULTIPLY);
-            current.setOnClickListener(new View.OnClickListener() {
+            current.setOnTouchListener(new View.OnTouchListener() {
                 @Override
-                public void onClick(View v) {
+                public boolean onTouch(View v, MotionEvent event) {
                     current.getBackground().setColorFilter(Color.rgb(255, 128, 0), PorterDuff.Mode.MULTIPLY);
+                    return true;
                 }
             });
         }
@@ -52,10 +54,11 @@ public class Manche
             final Button current = gameActivity.getBoutons().get(numero);
             current.setClickable(true);
             current.getBackground().setColorFilter(Color.rgb(153, 0, 0), PorterDuff.Mode.MULTIPLY);
-            current.setOnClickListener(new View.OnClickListener() {
+            current.setOnTouchListener(new View.OnTouchListener() {
                 @Override
-                public void onClick(View v) {
+                public boolean onTouch(View v, MotionEvent event) {
                     current.getBackground().setColorFilter(Color.rgb(0, 153, 0), PorterDuff.Mode.MULTIPLY);
+                    return true;
                 }
             });
         }
