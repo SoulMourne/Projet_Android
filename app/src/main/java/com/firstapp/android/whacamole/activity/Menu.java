@@ -15,6 +15,7 @@ public class Menu extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setTitle("Whac' A Mole !");
         setContentView(R.layout.activity_menu);
     }
 
