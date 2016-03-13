@@ -1,8 +1,11 @@
-package com.firstapp.android.whacamole;
+package com.firstapp.android.whacamole.score;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+
+import com.firstapp.android.whacamole.score.Score;
+
 import java.util.ArrayList;
 
 /**

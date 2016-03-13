@@ -1,9 +1,11 @@
-package com.firstapp.android.whacamole;
+package com.firstapp.android.whacamole.activity;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+
+import com.firstapp.android.whacamole.R;
 
 
 public class Menu extends AppCompatActivity {
@@ -16,7 +18,7 @@ public class Menu extends AppCompatActivity {
     }
 
     public void go_to_game(View view){
-        Intent intent1 = new Intent(Menu.this , WhacAMole.class);
+        Intent intent1 = new Intent(Menu.this , GameActivity.class);
         startActivity(intent1);
     }
 

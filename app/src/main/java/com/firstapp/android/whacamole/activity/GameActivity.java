@@ -1,4 +1,4 @@
-package com.firstapp.android.whacamole;
+package com.firstapp.android.whacamole.activity;
 
 import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
@@ -7,10 +7,14 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
+import com.firstapp.android.whacamole.R;
+import com.firstapp.android.whacamole.jeu.Game;
+import com.firstapp.android.whacamole.score.Scores;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class WhacAMole extends AppCompatActivity
+public class GameActivity extends AppCompatActivity
 {
 
     private ArrayList<Button> boutons;

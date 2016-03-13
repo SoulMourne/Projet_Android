@@ -1,4 +1,4 @@
-package com.firstapp.android.whacamole;
+package com.firstapp.android.whacamole.score;
 
 /**
  * Created by Jean-Paul on 13/03/2016.
