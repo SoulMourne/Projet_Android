@@ -69,6 +69,7 @@ public class Manche
                     if (event.getAction() == android.view.MotionEvent.ACTION_DOWN) {
                         game.getScore().addPoints(2);
                         gameActivity.setTitle("Manche " + game.getNumManche() + "     Score : " + game.getScore().getPoints());
+                        current.setOnTouchListener(null);
                     }
                     return true;
                 }
