@@ -77,8 +77,7 @@ public class GameActivity extends AppCompatActivity
     @Override
     public void onBackPressed()
     {
-        Intent intent2 = new Intent(GameActivity.this , Menu.class);
-        startActivity(intent2);
+        finish();
     }
 
     public ArrayList<Button> getBoutons()
