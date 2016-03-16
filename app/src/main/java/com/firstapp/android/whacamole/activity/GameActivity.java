@@ -32,6 +32,7 @@ public class GameActivity extends AppCompatActivity
 
         Bundle b = getIntent().getExtras();
         int manches = b.getInt("manches");
+        String difficulte = b.getString("difficulte");
 
         lignesLayout = new HashMap<>();
         boutons = new ArrayList<>();
@@ -69,7 +70,7 @@ public class GameActivity extends AppCompatActivity
             }
         }
         //bdScores
-        Game game = new Game(this,manches);
+        Game game = new Game(this,manches, difficulte);
         game.mancheSuivante();
     }
 

@@ -1,10 +1,7 @@
 package com.firstapp.android.whacamole.game;
 
-import android.content.Intent;
-import android.content.pm.LabeledIntent;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
-import android.os.Handler;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
@@ -15,7 +12,6 @@ import com.firstapp.android.whacamole.mecanism.MancheTimer;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Random;
-import java.util.Timer;
 
 /**
  * Created by Jean-Paul on 13/03/2016.
@@ -23,10 +19,20 @@ import java.util.Timer;
 public class Manche
 {
     private int nbMole;
-    private static final int MAX_MOLES = 4;
+    private static int maxMoles = 4;
 
     public Manche(final GameActivity gameActivity, final Game game)
     {
+        switch (game.getDifficulte())
+        {
+            case "difficile" :
+                maxMoles = 6;
+                break;
+            case "cauchemar" :
+                maxMoles = 8;
+                break;
+        }
+
         gameActivity.setTitle("Manche "+ game.getNumManche() +"     Score : " + game.getScore().getPoints());
 
         Iterator<Button> it = gameActivity.getBoutons().iterator();
@@ -50,7 +56,7 @@ public class Manche
         }
 
         Random generator = new Random();
-        nbMole = generator.nextInt(MAX_MOLES)+1;
+        nbMole = generator.nextInt(maxMoles)+1;
 
         ArrayList<Integer> activeMoles = new ArrayList<>();
         for (int i = 0; i<nbMole; i++) {

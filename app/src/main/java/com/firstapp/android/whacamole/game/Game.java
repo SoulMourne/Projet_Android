@@ -24,15 +24,15 @@ public class Game
     private GameActivity gameActivity;
     private Score score;
     private int nbManches;
-    private int violet;
-    private int black;
+    private String difficulte;
 
-    public Game(GameActivity parGameActivity, int parNbManches)
+    public Game(GameActivity parGameActivity, int parNbManches, String parDifficulte)
     {
         gameActivity = parGameActivity;
         numManche = 0;
         score = new Score();
         nbManches = parNbManches;
+        difficulte = parDifficulte;
 
     }
 
@@ -73,5 +73,10 @@ public class Game
             //Toast toast = Toast.makeText(context, text, duration);
             return null;
         }
+    }
+
+    public String getDifficulte()
+    {
+        return this.difficulte;
     }
 }

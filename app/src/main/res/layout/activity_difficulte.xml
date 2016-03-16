@@ -7,35 +7,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".activity.Difficulte"><![CDATA[
-
-    EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/editText"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="74dp"
-        android:layout_alignParentRight="true"
-        android:inputType="textPersonName"
-        android:layout_alignParentEnd="true" />
-
-    TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Choisissez un pseudo"
-        android:id="@+id/textView2"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:textSize="30sp"/>
-
-
-
-
-
-    ]]>
+    tools:context=".activity.Difficulte">
 
     <LinearLayout
         android:orientation="vertical"
@@ -105,28 +77,28 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Facile"
+            android:text="facile"
             android:id="@+id/facile_btn"
             android:layout_gravity="center_horizontal" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Moyen"
+            android:text="moyen"
             android:id="@+id/moyen_btn"
             android:layout_gravity="center_horizontal" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Difficile"
+            android:text="difficile"
             android:id="@+id/difficile_btn"
             android:layout_gravity="center_horizontal" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Cauchemar"
+            android:text="cauchemar"
             android:id="@+id/cauchemar_btn"
             android:layout_gravity="center_horizontal" />
 
