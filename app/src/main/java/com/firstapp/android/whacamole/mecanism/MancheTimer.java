@@ -31,7 +31,7 @@ public class MancheTimer extends Thread
         long millis = System.currentTimeMillis() - startTime;
         int seconds = (int) (millis / 1000);
 
-        if (startMillis+1500 > millis)
+        if (startMillis+1000 > millis)
             timerHandler.postDelayed(this, 200);
         else
             game.mancheSuivante();

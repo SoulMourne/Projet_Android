@@ -27,6 +27,7 @@ public class Game
     private int violet;
     private int black;
 
+
     public Game(GameActivity parGameActivity, String pseudo, int parNbManches)
     {
         gameActivity = parGameActivity;
