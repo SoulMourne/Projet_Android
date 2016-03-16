@@ -9,9 +9,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.firstapp.android.whacamole.R;
-import com.firstapp.android.whacamole.score.Score;
 
-public class Pseudo extends AppCompatActivity {
+public class Difficulte extends AppCompatActivity {
 
     TextView manches_text;
     Button manche_moins_btn;
@@ -20,7 +19,7 @@ public class Pseudo extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_pseudo);
+        setContentView(R.layout.activity_difficulte);
         manches_text=(TextView)findViewById(R.id.manches_text);
         manche_moins_btn = (Button) findViewById(R.id.manche_moins_btn);
         pseudoTexte = (EditText) findViewById(R.id.editText);
@@ -31,7 +30,7 @@ public class Pseudo extends AppCompatActivity {
         Bundle b = new Bundle();
         b.putString("pseudo", pseudoTexte.getText().toString());
         b.putInt("manches", Integer.parseInt(manches_text.getText().toString()));
-        Intent intent2 = new Intent(Pseudo.this , GameActivity.class);
+        Intent intent2 = new Intent(Difficulte.this , GameActivity.class);
         intent2.putExtras(b);
         startActivity(intent2);
     }
