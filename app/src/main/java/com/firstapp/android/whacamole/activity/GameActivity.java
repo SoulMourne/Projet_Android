@@ -31,7 +31,6 @@ public class GameActivity extends AppCompatActivity
         setContentView(R.layout.activity_whac_amole);
 
         Bundle b = getIntent().getExtras();
-        String pseudo = b.getString("pseudo");
         int manches = b.getInt("manches");
 
         lignesLayout = new HashMap<>();

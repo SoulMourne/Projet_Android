@@ -19,18 +19,12 @@ public class Menu extends AppCompatActivity {
         setContentView(R.layout.activity_menu);
     }
 
-    public void go_to_pseudo(View view){
+    public void go_to_difficulte(View view){
         Bundle b = new Bundle();
         Intent intent1 = new Intent(Menu.this , Difficulte.class);
         startActivity(intent1);
     }
 
-    public void go_to_score(View view){
-        Intent intent2 = new Intent(Menu.this, Score.class);
-        startActivity(intent2);
-
-
-    }
 
 
 

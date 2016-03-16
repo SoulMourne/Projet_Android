@@ -22,8 +22,7 @@ public class Difficulte extends AppCompatActivity {
         setContentView(R.layout.activity_difficulte);
         manches_text=(TextView)findViewById(R.id.manches_text);
         manche_moins_btn = (Button) findViewById(R.id.manche_moins_btn);
-        pseudoTexte = (EditText) findViewById(R.id.editText);
-        setTitle("Entrez votre pseudo");
+        setTitle("Choisissez la difficulté");
     }
 
     public void go_to_game(View view){
