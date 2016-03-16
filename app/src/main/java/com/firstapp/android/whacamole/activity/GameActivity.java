@@ -1,7 +1,6 @@
 package com.firstapp.android.whacamole.activity;
 
 import android.content.Intent;
-import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Button;
@@ -10,7 +9,6 @@ import android.widget.RelativeLayout;
 
 import com.firstapp.android.whacamole.R;
 import com.firstapp.android.whacamole.game.Game;
-import com.firstapp.android.whacamole.score.Scores;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -25,8 +23,6 @@ public class GameActivity extends AppCompatActivity
 
     private RelativeLayout relativeLayout;
 
-    private Scores bdScores;
-    private String bdName = "scores.db";
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -73,10 +69,8 @@ public class GameActivity extends AppCompatActivity
                 ligne.addView(bouton);
             }
         }
-        bdScores = new Scores(this, this.bdName, null, 1);
-
         //bdScores
-        Game game = new Game(this,pseudo,manches);
+        Game game = new Game(this,manches);
         game.mancheSuivante();
     }
 

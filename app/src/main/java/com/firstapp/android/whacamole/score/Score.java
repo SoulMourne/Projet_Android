@@ -15,7 +15,6 @@ import com.firstapp.android.whacamole.R;
 public class Score extends AppCompatActivity
 {
     private int points;
-    private String pseudo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,24 +27,12 @@ public class Score extends AppCompatActivity
 
     public Score ()
     {
-        pseudo = "";
         points = 0;
     }
 
     public Score(String parPseudo)
     {
-        pseudo = parPseudo;
         points = 0;
-    }
-
-    public String getPseudo()
-    {
-        return this.pseudo;
-    }
-
-    public void setPseudo(String parPseudo)
-    {
-        this.pseudo = parPseudo;
     }
 
     public int getPoints()

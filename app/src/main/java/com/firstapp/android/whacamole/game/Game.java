@@ -24,14 +24,12 @@ public class Game
     private GameActivity gameActivity;
     private Score score;
     private int nbManches;
-    private int violet;
-    private int black;
 
-    public Game(GameActivity parGameActivity, String pseudo, int parNbManches)
+    public Game(GameActivity parGameActivity, int parNbManches)
     {
         gameActivity = parGameActivity;
         numManche = 0;
-        score = new Score(pseudo);
+        score = new Score();
         nbManches = parNbManches;
 
     }
