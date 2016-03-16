@@ -26,46 +26,19 @@
         android:layout_height="wrap_content"
         android:text="START GAME"
         android:id="@+id/btn_start_game"
-        android:layout_above="@+id/btn_score"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignRight="@+id/btn_score"
-        android:layout_alignEnd="@+id/btn_score"
-        android:onClick="go_to_pseudo"/>
-
-    <Button
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="SCORE"
-        android:id="@+id/btn_score"
-        android:layout_above="@+id/btn_exit"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignRight="@+id/btn_exit"
-        android:layout_alignEnd="@+id/btn_exit"
-        android:onClick="go_to_score"/>
-
-    <Button
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="EXIT"
-        android:id="@+id/btn_exit"
+        android:onClick="go_to_pseudo"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:onClick="exit_app"/>
+        android:layout_alignParentEnd="true" />
 
     <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/mole_rat"
-        android:layout_marginTop="41dp"
         android:src="@mipmap/mole_rat"
-        android:layout_below="@+id/textView"
+        android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" />
 
 

@@ -24,6 +24,8 @@ public class Game
     private GameActivity gameActivity;
     private Score score;
     private int nbManches;
+    private int violet;
+    private int black;
 
     public Game(GameActivity parGameActivity, int parNbManches)
     {

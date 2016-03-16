@@ -20,9 +20,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.GameActivity" />
-        <activity android:name=".activity.Pseudo" />
-        <activity android:name=".score.Score" />
+        <activity android:name=".activity.GameActivity"
+            android:noHistory="true"/>
+        <activity android:name=".activity.Pseudo"
+            android:noHistory="true"/>
+        <activity android:name=".score.Score"
+            android:noHistory="true"/>
 
     </application>
 

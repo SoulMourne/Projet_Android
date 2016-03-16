@@ -51,9 +51,10 @@ public class Pseudo extends AppCompatActivity {
         CharSequence b=manches_text.getText();
         int num_manche = Integer.parseInt(b.toString());
         manches_text.setText(String.valueOf(num_manche -= 1));
-        if (num_manche == 1){
+        if (num_manche <= 15){
             manche_moins_btn.setVisibility(View.INVISIBLE);
         }
     }
+
 
 }

@@ -31,9 +31,6 @@ public class Menu extends AppCompatActivity {
 
     }
 
-    public void exit_app(View view){
-        finish();
-    }
 
 
 }
