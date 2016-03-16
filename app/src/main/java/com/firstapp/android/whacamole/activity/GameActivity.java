@@ -21,7 +21,7 @@ public class GameActivity extends AppCompatActivity
     private static final int NB_COLONNES = 5;
     private HashMap<Integer,LinearLayout> lignesLayout;
 
-    private RelativeLayout relativeLayout;
+    public RelativeLayout relativeLayout;
 
 
     @Override

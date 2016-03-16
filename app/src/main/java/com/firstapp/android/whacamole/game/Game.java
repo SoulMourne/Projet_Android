@@ -1,13 +1,17 @@
 package com.firstapp.android.whacamole.game;
 
+import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.view.View;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.Toast;
 import android.widget.Button;
 
+import com.firstapp.android.whacamole.R;
 import com.firstapp.android.whacamole.activity.*;
 import com.firstapp.android.whacamole.score.Score;
 
@@ -25,6 +29,7 @@ public class Game
     private Score score;
     private int nbManches;
     private String difficulte;
+    private RelativeLayout relativeLayout;
 
     public Game(GameActivity parGameActivity, int parNbManches, String parDifficulte)
     {
@@ -65,12 +70,14 @@ public class Game
 
             //Retour menu ou scores
 
-            //Context context = gameActivity.getApplicationContext();
-            //CharSequence text = "Fin de la partie";
-            //int duration = Toast.LENGTH_SHORT;
 
             gameActivity.setTitle("Fin de la partie");
-            //Toast toast = Toast.makeText(context, text, duration);
+            //Toast.makeText(gameActivity, "Votre Score: "+ this.getScore().getPoints(), Toast.LENGTH_LONG).show();
+            AlertDialog.Builder fin_partie = new AlertDialog.Builder(gameActivity);
+            fin_partie.setTitle("Votre Score: "+ this.getScore().getPoints());
+            AlertDialog alertDialog = fin_partie.create();
+            alertDialog.show();
+
             return null;
         }
     }
