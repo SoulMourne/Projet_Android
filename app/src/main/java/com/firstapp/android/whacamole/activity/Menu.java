@@ -21,7 +21,7 @@ public class Menu extends AppCompatActivity {
 
     public void go_to_pseudo(View view){
         Bundle b = new Bundle();
-        Intent intent1 = new Intent(Menu.this , Pseudo.class);
+        Intent intent1 = new Intent(Menu.this , Difficulte.class);
         startActivity(intent1);
     }
 

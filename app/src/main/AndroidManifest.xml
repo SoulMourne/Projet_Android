@@ -22,7 +22,7 @@
         </activity>
         <activity android:name=".activity.GameActivity"
             android:noHistory="true"/>
-        <activity android:name=".activity.Pseudo"
+        <activity android:name=".activity.Difficulte"
             android:noHistory="true"/>
         <activity android:name=".score.Score"
             android:noHistory="true"/>
