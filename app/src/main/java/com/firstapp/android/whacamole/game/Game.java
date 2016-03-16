@@ -2,6 +2,7 @@ package com.firstapp.android.whacamole.game;
 
 import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
@@ -75,6 +76,12 @@ public class Game
             //Toast.makeText(gameActivity, "Votre Score: "+ this.getScore().getPoints(), Toast.LENGTH_LONG).show();
             AlertDialog.Builder fin_partie = new AlertDialog.Builder(gameActivity);
             fin_partie.setTitle("Votre Score: "+ this.getScore().getPoints());
+            fin_partie.setCancelable(false);
+            fin_partie.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int id) {
+                    gameActivity.finish();
+                }
+            });
             AlertDialog alertDialog = fin_partie.create();
             alertDialog.show();
 
